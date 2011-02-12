@@ -23,10 +23,10 @@ function map_path_to_resource(path, resource)
   end
   if type(pos) == "table" then
     header_ok()
-    print("[" .. table.concat(keys(pos), ",") .. "]")
+    print("[\"" .. table.concat(keys(pos), "\", \"") .. "\"]")
   elseif type(pos) == "function" then
     header_ok()
-    print(string.format("{ value: %u }", pos()))
+    print(string.format("{ \"value\": %u }", pos()))
   else
     header_notfound()
   end
